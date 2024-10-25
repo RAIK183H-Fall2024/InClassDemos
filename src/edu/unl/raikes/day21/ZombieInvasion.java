@@ -25,6 +25,10 @@ public class ZombieInvasion {
 
         // non static version
         double distanceToBettendorf = ourTown.distance(bettendorf);
+        distanceToBettendorf = ourTown.distance(bettendorf);
+        distanceToBettendorf = ourTown.distance(bettendorf);
+        distanceToBettendorf = ourTown.distance(bettendorf);
+        distanceToBettendorf = ourTown.distance(bettendorf);
 
         System.out.println(bettendorf.getName() + " is " + distanceToBettendorf + " miles away.");
         System.out.println(bettendorf);

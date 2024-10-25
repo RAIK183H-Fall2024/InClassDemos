@@ -1,9 +1,17 @@
 package edu.unl.raikes.day21;
 
 public class Point {
-
     private double x;
     private double y;
+
+    private static double ORIGIN_X = 0;
+    private static double ORIGIN_Y = 0;
+
+    private static int countOfDistancesComputed = 0;
+
+    public Point() {
+        this(ORIGIN_X, ORIGIN_Y);
+    }
 
     public Point(double x, double y) {
         this.x = x;
@@ -16,6 +24,8 @@ public class Point {
     }
 
     public static double distance(Point firstPoint, Point otherPoint) {
+        countOfDistancesComputed++;
+
         double deltaX = otherPoint.getX() - firstPoint.getX();
         double deltaY = otherPoint.getY() - firstPoint.getY();
 
@@ -62,7 +72,7 @@ public class Point {
 
     @Override
     public String toString() {
-        return "[x=" + this.x + ", y=" + this.y + "]";
+        return "[x=" + this.x + ", y=" + this.y + "] (" + countOfDistancesComputed + ")";
     }
 
 }
