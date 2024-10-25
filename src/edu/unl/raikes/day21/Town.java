@@ -8,33 +8,23 @@ public class Town {
     // private - no one but "this" can modify
     private String name;
     private String mayorName;
-    private double x;
-    private double y;
+    private Point location;
+
     private boolean isElectionSeason = false;
-    static int population = 12;
 
     public Town(String name, String mayorName, double x, double y) {
+        this(name, mayorName, new Point(x, y));
+    }
+
+    public Town(String name, String mayorName, Point location) {
         this.name = name;
         this.mayorName = mayorName;
-        this.x = x;
-        this.y = y;
-        System.out.println("makin a new town");
-        population++;
+        this.location = location;
     }
 
     // non static because it relies on town data - we need this.x and this.y to do this work
     public double distance(Town otherTown) {
-        double deltaX = otherTown.x - this.x;
-        double deltaY = otherTown.y - this.y;
-
-        double squares = Math.pow(deltaX, 2) + Math.pow(deltaY, 2);
-
-        return Math.sqrt(squares);
-    }
-
-    // this is static because it doesn't rely on "this" at all
-    public static double distance(Town townA, Town townB) {
-        return townA.x;
+        return this.location.distance(otherTown.getLocation());
     }
 
     /**
@@ -76,38 +66,27 @@ public class Town {
     }
 
     /**
-     * Gets the object's x.
+     * Gets the object's location.
      *
-     * @return the x
+     * @return the location
      */
-    public double getX() {
-        return this.x;
+    public Point getLocation() {
+        return this.location;
     }
 
     /**
-     * Sets the object's x.
+     * Sets the object's location.
      *
-     * @param x the x to set
+     * @param location the location to set
      */
-    public void setX(double x) {
-        this.x = x;
+    public void setLocation(Point location) {
+        this.location = location;
     }
 
-    /**
-     * Gets the object's y.
-     *
-     * @return the y
-     */
-    public double getY() {
-        return this.y;
+    @Override
+    public String toString() {
+        return "I'm a town called " + this.name + " and my mayor is the honorable " + this.mayorName
+                + ".\nI am located at " + this.location.toString();
     }
 
-    /**
-     * Sets the object's y.
-     *
-     * @param y the y to set
-     */
-    public void setY(double y) {
-        this.y = y;
-    }
 }
