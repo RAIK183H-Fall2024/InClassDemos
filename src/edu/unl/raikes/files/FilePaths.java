@@ -24,5 +24,7 @@ public class FilePaths {
         while (charmScanner.hasNextLine()) {
             System.out.println(charmScanner.nextLine());
         }
+
+        charmScanner.close();
     }
 }
