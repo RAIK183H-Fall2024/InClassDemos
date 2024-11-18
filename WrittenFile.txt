@@ -1,0 +1,23 @@
+id = 123
+name = Sabi
+next hours = 12.5
+next hours = 8.1
+next hours = 7.6
+next hours = 3.2
+Sabi (ID#123) worked 31.400000000000002 hours (7.8500000000000005 hours/day)
+id = 456
+name = Eric
+next hours = 4.0
+next hours = 11.6
+next hours = 6.5
+next hours = 2.7
+next hours = 12.0
+Eric (ID#456) worked 36.8 hours (7.359999999999999 hours/day)
+id = 789
+name = Juan
+next hours = 8.0
+next hours = 8.0
+next hours = 8.0
+next hours = 8.0
+next hours = 7.5
+Juan (ID#789) worked 39.5 hours (7.9 hours/day)
