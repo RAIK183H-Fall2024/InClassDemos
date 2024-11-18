@@ -17,9 +17,9 @@ public class ReverseFile {
         if (!s.hasNextLine()) {
             return "";
         } else {
-//            String thisLine = ;
+            String thisLine = s.nextLine();
             String everythingElseReversedString = recurseReverse(s);
-            return everythingElseReversedString + "\n" + s.nextLine();
+            return everythingElseReversedString + "\n" + thisLine;
         }
     }
 
